@@ -3,7 +3,6 @@ from .repository import MovieRepository
 
 
 class MovieService:
-
     def __init__(self):
         self.movie_repository = MovieRepository()
 
@@ -16,16 +15,16 @@ class MovieService:
         return movies
 
     def create_movie(self, title, release_date, genre, actors, resume):
-        movie = {
-            'title': title,
-            'release_date': release_date,
-            'genre': genre,
-            'actors': actors,
-            'resume': resume
-        }
-        return self.movie_repository.create_movie(movie)
-
-    def get_movie_stats(self):
-        new_movie = self.movie_repository.get_movie_stats()
+        movie = dict(
+            title=title,
+            release_date=release_date,
+            genre=genre,
+            actors=actors,
+            resume=resume
+        )
+        new_movie = self.movie_repository.create_movie(movie)
         st.session_state.movies.append(new_movie)
         return new_movie
+
+    def get_movie_stats(self):
+        return self.movie_repository.get_movie_stats()

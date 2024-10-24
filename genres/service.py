@@ -3,7 +3,6 @@ from .repository import GenreRepository
 
 
 class GenreService:
-
     def __init__(self):
         self.genre_repository = GenreRepository()
 
@@ -16,7 +15,7 @@ class GenreService:
         return genres
 
     def create_genre(self, name):
-        genre = {'name': name}
+        genre = dict(name=name)
         new_genre = self.genre_repository.create_genre(genre)
         st.session_state.genres.append(new_genre)
         return new_genre

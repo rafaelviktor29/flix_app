@@ -4,7 +4,6 @@ from login.service import logout
 
 
 class MovieRepository:
-
     def __init__(self):
         self.__base_url = 'https://rafaelviktor.pythonanywhere.com/api/v1/'
         self.__movies_url = f'{self.__base_url}movies/'

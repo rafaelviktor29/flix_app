@@ -4,7 +4,6 @@ from login.service import logout
 
 
 class GenreRepository:
-
     def __init__(self):
         self.__base_url = 'https://rafaelviktor.pythonanywhere.com/api/v1/'
         self.__genres_url = f'{self.__base_url}genres/'

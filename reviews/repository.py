@@ -4,7 +4,6 @@ from login.service import logout
 
 
 class ReviewRepository:
-
     def __init__(self):
         self.__base_url = 'https://rafaelviktor.pythonanywhere.com/api/v1/'
         self.__reviews_url = f'{self.__base_url}reviews/'

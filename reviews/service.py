@@ -3,7 +3,6 @@ from .repository import ReviewRepository
 
 
 class ReviewService:
-
     def __init__(self):
         self.review_repository = ReviewRepository()
 
